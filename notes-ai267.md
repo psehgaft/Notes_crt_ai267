@@ -10,7 +10,7 @@
 
 ## Create a workbech with data base access
 
-´´´śh
+```jupiter
 import os
 
 key_id = os.getenv("AWS_ACCESS_KEY_ID")
@@ -18,13 +18,13 @@ secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 region = os.getenv("AWS_DEFAULT_REGION")
 endpoint = os.getenv("AWS_S3_ENDPOINT")
 bucket_name = os.getenv("AWS_S3_BUCKET")
-´´´
+```
 
 # Use data science workbenches
 
 ## Edit ODH modelserverSizes
 
-´´´OdhDashboardConfig.yaml
+```OdhDashboardConfig.yaml
 apiVersion: opendatahub.io/v1alpha
 kind: OdhDashboardConfig
 metadata:
@@ -45,14 +45,15 @@ spec:
     - name: Medium
     ...
     - name: Micro
-´´´
+```
 
 ## Deploy an image
 
-´´´
+```sh
 podman build . -t [image-name]:[tag]
 podman push [registry]/[image-name]:[tag]
-´´´
+```
+
 # Use Git to manage Jupyter notebooks collaboratively
 
 # Work with machine learning models
