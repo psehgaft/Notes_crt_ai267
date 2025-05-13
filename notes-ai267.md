@@ -99,10 +99,12 @@ from sklearn.linear_model import LogisticRegression
 model = LogisticRegression()
 ```
 
+## Save
+
 ```output
-output omitted...
 joblib.dump(model, "my_model.joblib")
 ```
+## load
 
 ```sh
 model = joblib.load("my_model.joblib")
