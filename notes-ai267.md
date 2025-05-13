@@ -92,3 +92,18 @@ podman push [registry]/[image-name]:[tag]
 # Work with machine learning models
 
 # Save and load models
+
+```sh
+import joblib
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+```
+
+```output
+output omitted...
+joblib.dump(model, "my_model.joblib")
+```
+
+```sh
+model = joblib.load("my_model.joblib")
+```
