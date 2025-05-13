@@ -1,9 +1,42 @@
 # Configure and manage RHOAI
 
+```ia-namespace.yaml
+kind: Project                             
+apiVersion: project.openshift.io/v1
+metadata:
+  name: ai-project                    
+  labels:
+    kubernetes.io/metadata.name: ai-project
+    modelmesh-enabled: 'true'
+    opendatahub.io/dashboard: 'true'     
+    ...output omitted...
+
 # Work with data science projects
 
-- Create a Project
-- Asign user permisions users and grups
+## Create a Project
+
+```sh
+oc create namespace ai-project
+oc label namespace ai-project opendatahub.io/dashboard='true' modelmesh-enabled='true'
+```
+
+## Asign user permisions users and grups
+
+```sh
+oc adm groups add-users rhods-admins ai-user1 ai-user2
+```
+
+Groups
+
+```sh
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: ai-group
+users:
+  - ai-user1
+```
+
 - Add Key / Value config map to workbench
 
 - Modify workbench images
