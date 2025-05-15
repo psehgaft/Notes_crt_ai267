@@ -41,6 +41,10 @@ users:
 
 - Modify workbench images
 
+```sh
+s3://[buket_name]/file
+```
+
 ## Create a workbech with data base access
 
 ```jupiter
@@ -49,7 +53,7 @@ import os
 key_id = os.getenv("AWS_ACCESS_KEY_ID")
 secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 region = os.getenv("AWS_DEFAULT_REGION")
-endpoint = os.getenv("AWS_S3_ENDPOINT")
+endpoint = os.getenv("AWS_S3_ENDPOINT") # important to use https://[AWS_S3_ENDPOINT]
 bucket_name = os.getenv("AWS_S3_BUCKET")
 ```
 
@@ -89,7 +93,10 @@ podman push [registry]/[image-name]:[tag]
 
 # Use Git to manage Jupyter notebooks collaboratively
 
+- Use git clone for clone repo
+
 # Work with machine learning models
+- Save and recharge kernel is important thing after external changes
 
 # Save and load models
 
@@ -97,15 +104,16 @@ podman push [registry]/[image-name]:[tag]
 import joblib
 from sklearn.linear_model import LogisticRegression
 model = LogisticRegression()
+filename = my_model.joblib
 ```
 
 ## Save
 
 ```output
-joblib.dump(model, "my_model.joblib")
+joblib.dump(model, filename)
 ```
 ## load
 
 ```sh
-model = joblib.load("my_model.joblib")
+model = joblib.load(filename)
 ```
