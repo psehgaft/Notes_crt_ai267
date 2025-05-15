@@ -59,6 +59,20 @@ bucket_name = os.getenv("AWS_S3_BUCKET")
 
 # Use data science workbenches
 
+```sh
+cat Containerfile
+
+FROM registry....
+COPY requirements.txt ./
+
+```
+
+```sh
+ echo "phyton==0.12.2" >> requirements.txt
+
+podman build . -t registry.ocp4.example.com:8443/[image]:1.0
+```
+
 ## Edit ODH modelserverSizes
 
 ```OdhDashboardConfig.yaml
