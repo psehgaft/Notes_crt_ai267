@@ -69,14 +69,19 @@ metadata:
     internal.config.kubernetes.io/previousKinds: OdhDashboardConfig
     internal.config.kubernetes.io/previousNames: odh-dashboard-config
     internal.config.kubernetes.io/previousNamespaces: default
-  name: odh-dashboard-config 1
-  namespace: redhat-ods-applications 2
+  name: odh-dashboard-config 
+  namespace: redhat-ods-applications 
   labels:
     app.kubernetes.io/part-of: rhods-dashboard
     app.opendatahub.io/rhods-dashboard: 'true'
 spec:
 ...output omitted...
-  modelServerSizes: 3
+  modelServerSizes: 
+    - name: Small
+    ...
+    - name: Medium
+    ...
+  notebookSizes:
     - name: Small
     ...
     - name: Medium
