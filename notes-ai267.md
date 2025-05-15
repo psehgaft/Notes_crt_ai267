@@ -99,6 +99,7 @@ podman push [registry]/[image-name]:[tag]
 # Use Git to manage Jupyter notebooks collaboratively
 
 - Use git clone for clone repo
+- Push commit
 
 # Work with machine learning models
 - Save and recharge kernel is important thing after external changes
