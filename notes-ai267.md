@@ -1,4 +1,5 @@
 # Configure and manage RHOAI
+## Work with data science projects
 
 ```ia-namespace.yaml
 kind: Project                             
@@ -11,7 +12,6 @@ metadata:
     opendatahub.io/dashboard: 'true'     
     ...output omitted...
 ```
-# Work with data science projects
 
 ## Create a Project
 
