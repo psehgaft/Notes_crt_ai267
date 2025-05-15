@@ -10,7 +10,7 @@ metadata:
     modelmesh-enabled: 'true'
     opendatahub.io/dashboard: 'true'     
     ...output omitted...
-
+```
 # Work with data science projects
 
 ## Create a Project
